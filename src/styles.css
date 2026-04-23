@@ -1,0 +1,185 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-moss: var(--moss);
+  --color-bark: var(--bark);
+  --color-stone: var(--stone);
+  --color-cream: var(--cream);
+  --color-gold: var(--gold);
+  --color-charcoal: var(--charcoal);
+  --font-display: "Cormorant Garamond", "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("https://fonts.gstatic.com/s/cormorantgaramond/v16/co3bmX5slCNuHLi8bLeY9MK7whWMhyjornFLsS6V7w.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Earthy luxury palette — warm cream, charcoal, moss, bark, gold */
+  --background: oklch(0.96 0.012 80);              /* warm cream */
+  --foreground: oklch(0.22 0.012 60);              /* deep charcoal-bark */
+
+  --card: oklch(0.98 0.008 80);
+  --card-foreground: oklch(0.22 0.012 60);
+  --popover: oklch(0.98 0.008 80);
+  --popover-foreground: oklch(0.22 0.012 60);
+
+  --primary: oklch(0.28 0.022 145);                /* deep moss/charcoal-green */
+  --primary-foreground: oklch(0.96 0.012 80);
+
+  --secondary: oklch(0.91 0.018 75);               /* warm sand */
+  --secondary-foreground: oklch(0.28 0.022 145);
+
+  --muted: oklch(0.92 0.012 80);
+  --muted-foreground: oklch(0.45 0.018 70);
+
+  --accent: oklch(0.68 0.11 65);                   /* golden-hour amber */
+  --accent-foreground: oklch(0.18 0.012 60);
+
+  --destructive: oklch(0.55 0.18 28);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.85 0.014 75);
+  --input: oklch(0.88 0.014 75);
+  --ring: oklch(0.68 0.11 65);
+
+  /* Brand named tokens */
+  --moss: oklch(0.32 0.04 145);
+  --bark: oklch(0.38 0.04 55);
+  --stone: oklch(0.72 0.012 80);
+  --cream: oklch(0.96 0.012 80);
+  --gold: oklch(0.72 0.12 70);
+  --charcoal: oklch(0.18 0.012 60);
+
+  /* Gradients & shadows */
+  --gradient-cinematic: linear-gradient(180deg, oklch(0.18 0.012 60 / 0) 0%, oklch(0.12 0.012 60 / 0.55) 60%, oklch(0.10 0.012 60 / 0.92) 100%);
+  --gradient-warmth: linear-gradient(135deg, oklch(0.72 0.12 70 / 0.18), oklch(0.32 0.04 145 / 0.05));
+  --shadow-soft: 0 30px 80px -40px oklch(0.18 0.012 60 / 0.5);
+  --shadow-frame: 0 1px 0 oklch(0.18 0.012 60 / 0.06), 0 30px 60px -30px oklch(0.18 0.012 60 / 0.35);
+
+  --sidebar: var(--background);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+.dark {
+  --background: oklch(0.16 0.012 60);
+  --foreground: oklch(0.94 0.012 80);
+  --card: oklch(0.20 0.012 60);
+  --card-foreground: oklch(0.94 0.012 80);
+  --popover: oklch(0.20 0.012 60);
+  --popover-foreground: oklch(0.94 0.012 80);
+  --primary: oklch(0.94 0.012 80);
+  --primary-foreground: oklch(0.18 0.012 60);
+  --secondary: oklch(0.26 0.012 60);
+  --secondary-foreground: oklch(0.94 0.012 80);
+  --muted: oklch(0.26 0.012 60);
+  --muted-foreground: oklch(0.70 0.012 75);
+  --accent: oklch(0.72 0.12 70);
+  --accent-foreground: oklch(0.18 0.012 60);
+  --border: oklch(1 0 0 / 0.08);
+  --input: oklch(1 0 0 / 0.12);
+  --ring: oklch(0.72 0.12 70);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+    font-weight: 500;
+  }
+}
+
+@layer utilities {
+  .cinematic-overlay {
+    background-image: var(--gradient-cinematic);
+  }
+  .warmth-overlay {
+    background-image: var(--gradient-warmth);
+  }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-frame { box-shadow: var(--shadow-frame); }
+  .grain::after {
+    content: "";
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(oklch(0 0 0 / 0.18) 1px, transparent 1px);
+    background-size: 3px 3px;
+    mix-blend-mode: overlay;
+    opacity: 0.12;
+  }
+  .text-balance { text-wrap: balance; }
+
+  @keyframes ken-burns {
+    0% { transform: scale(1.05) translate3d(0,0,0); }
+    100% { transform: scale(1.18) translate3d(-1.5%, -1%, 0); }
+  }
+  .animate-ken-burns { animation: ken-burns 18s ease-out forwards; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-rise { animation: rise 0.9s cubic-bezier(.2,.7,.2,1) both; }
+  .delay-100 { animation-delay: .1s; }
+  .delay-200 { animation-delay: .25s; }
+  .delay-300 { animation-delay: .4s; }
+  .delay-400 { animation-delay: .55s; }
+
+  .hairline { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); }
+}
