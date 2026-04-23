@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
   return (
@@ -28,12 +28,12 @@ export function SiteFooter() {
         </div>
 
         <div className="md:col-span-4">
-          <p className="eyebrow text-cream/50">Get in touch</p>
+          <p className="eyebrow text-cream/50">Service Area</p>
           <ul className="mt-5 space-y-3 text-cream/80">
             <li>Youngsville, NC</li>
             <li>Serving the greater Triangle &amp; surrounding NC</li>
-            <li><a href="mailto:hello@southlandscaping.co" className="hover:text-cream">hello@southlandscaping.co</a></li>
-            <li><a href="tel:+19195550175" className="hover:text-cream">(919) 555-0175</a></li>
+            <li>Landscape design, hardscaping, gardens, and outdoor living</li>
+            <li><Link to="/contact" className="hover:text-cream">Request a consultation</Link></li>
           </ul>
         </div>
       </div>

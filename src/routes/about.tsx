@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SectionLabel } from "@/components/SectionLabel";
@@ -7,6 +7,10 @@ import craft from "@/assets/craft.jpg";
 import outdoorLiving from "@/assets/outdoor-living.jpg";
 import walkway from "@/assets/walkway.jpg";
 import garden from "@/assets/garden.jpg";
+
+export const Route = createFileRoute("/about")({
+  component: AboutPage,
+});
 
 export default function AboutPage() {
   return (

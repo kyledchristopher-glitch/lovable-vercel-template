@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -28,7 +28,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         solid
           ? "bg-background/85 backdrop-blur-md border-b border-border/60"
-          : "bg-transparent"
+          : "bg-gradient-to-b from-charcoal/70 via-charcoal/35 to-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
@@ -53,8 +53,8 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
               key={l.to}
               to={l.to}
               className={`text-[13px] uppercase tracking-[0.18em] transition-colors ${
-                solid ? "text-foreground/70 hover:text-foreground" : "text-white/80 hover:text-white"
-              }`}
+              solid ? "text-foreground/70 hover:text-foreground" : "text-white/80 hover:text-white"
+              } drop-shadow-[0_1px_10px_rgba(0,0,0,0.3)]`}
             >
               {l.label}
             </Link>
@@ -66,7 +66,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
           className={`hidden lg:inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-[12px] uppercase tracking-[0.2em] transition-all ${
             solid
               ? "border-foreground bg-foreground text-background hover:bg-foreground/90"
-              : "border-white text-white hover:bg-white hover:text-foreground"
+              : "border-white text-white hover:bg-white hover:text-foreground shadow-[0_10px_30px_rgba(0,0,0,0.18)]"
           }`}
         >
           Request Consultation

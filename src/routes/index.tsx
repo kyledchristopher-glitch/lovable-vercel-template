@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SectionLabel } from "@/components/SectionLabel";
@@ -11,6 +11,10 @@ import patio from "@/assets/patio.jpg";
 import retainingWall from "@/assets/retaining-wall.jpg";
 import craft from "@/assets/craft.jpg";
 import aerial from "@/assets/aerial.jpg";
+
+export const Route = createFileRoute("/")({
+  component: HomePage,
+});
 
 const services = [
   { icon: TreePine, title: "Landscape Design", desc: "Site-responsive design grounded in your land, lifestyle, and the seasons." },
@@ -63,9 +67,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-white/50 text-[10px] uppercase tracking-[0.4em]">
-          Scroll
-        </div>
       </section>
 
       {/* POSITIONING */}
@@ -215,22 +216,23 @@ export default function HomePage() {
           <h2 className="mt-6 font-display text-4xl sm:text-5xl max-w-3xl">
             Trusted by homeowners who care deeply about their property.
           </h2>
-          <div className="mt-16 grid gap-10 md:grid-cols-3">
+          <div className="mt-16 grid gap-10 md:grid-cols-2">
             {[
               {
-                q: "South completely transformed how we use our backyard. The stonework is genuinely beautiful — neighbors stop and ask about it.",
-                n: "Hannah & Will P.",
-                l: "Wake Forest, NC",
+                q: "Just a fantastic job and we could not be more pleased. From start to finish, Hugo cared greatly about all the finishing touches.",
+                n: "Jon F.",
               },
               {
-                q: "They listened, designed thoughtfully, and built it cleanly. There’s a calm to working with a team that takes craft seriously.",
-                n: "Marcus L.",
-                l: "Youngsville, NC",
+                q: "Hugo exceeded my expectations. His attention to detail and follow-up is a rare find these days with any home project.",
+                n: "Tina M.",
               },
               {
-                q: "Two years in and the gardens look better than the day they finished. That tells you everything about how they plan a landscape.",
-                n: "The Reyes Family",
-                l: "Raleigh, NC",
+                q: "Hugo and his team did an excellent job on our backyard pool project. We worked together over the course of an extensive nine month project and are very happy with the outcome.",
+                n: "Joe M.",
+              },
+              {
+                q: "I chose South Landscaping based on the overwhelmingly positive reviews and Hugo’s professionalism. I am completely satisfied and wholeheartedly recommend South Landscaping.",
+                n: "Don A.",
               },
             ].map((t) => (
               <figure key={t.n} className="bg-background p-10 rounded-lg shadow-soft">
@@ -239,7 +241,6 @@ export default function HomePage() {
                 </blockquote>
                 <figcaption className="mt-8 border-t border-border pt-5">
                   <p className="font-medium">{t.n}</p>
-                  <p className="text-sm text-muted-foreground mt-1">{t.l}</p>
                 </figcaption>
               </figure>
             ))}

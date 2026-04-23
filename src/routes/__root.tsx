@@ -1,5 +1,5 @@
 import type * as React from "react";
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { HeadContent, Link, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
 
@@ -31,13 +31,21 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "South Landscaping" },
-      { name: "description", content: "Premium landscape design and build studio serving Youngsville, Wake Forest, Raleigh, and surrounding North Carolina communities." },
+      {
+        name: "description",
+        content:
+          "South Landscaping designs and builds patios, walkways, retaining walls, gardens, and outdoor living spaces across Youngsville, Wake Forest, Raleigh, and nearby North Carolina communities.",
+      },
       { name: "author", content: "South Landscaping" },
       { property: "og:title", content: "South Landscaping" },
-      { property: "og:description", content: "Premium landscape design and build studio serving Youngsville, Wake Forest, Raleigh, and surrounding North Carolina communities." },
+      {
+        property: "og:description",
+        content:
+          "Landscape design, hardscaping, gardens, and outdoor living spaces built with care across the North Carolina Triangle.",
+      },
+      { property: "og:site_name", content: "South Landscaping" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@southlandscaping" },
     ],
     links: [
       {

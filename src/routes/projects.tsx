@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SectionLabel } from "@/components/SectionLabel";
@@ -12,6 +12,10 @@ import outdoorLiving from "@/assets/outdoor-living.jpg";
 import aerial from "@/assets/aerial.jpg";
 import hero from "@/assets/hero.jpg";
 import craft from "@/assets/craft.jpg";
+
+export const Route = createFileRoute("/projects")({
+  component: ProjectsPage,
+});
 
 type Project = { img: string; title: string; loc: string; tag: string; size?: "tall" | "wide" };
 const projects: Project[] = [
@@ -35,16 +39,16 @@ export default function ProjectsPage() {
         <img src={aerial} alt="Aerial view of landscaped estate" className="absolute inset-0 h-full w-full object-cover animate-ken-burns" width={1920} height={1080}/>
         <div className="absolute inset-0 cinematic-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 lg:px-10 pb-24 text-white">
-          <span className="eyebrow text-white/70 animate-rise">Selected Projects</span>
+          <span className="eyebrow text-white/70 animate-rise">Projects</span>
           <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl max-w-4xl text-balance animate-rise delay-100">
-            A quiet portfolio of work we’re proud of.
+            Projects we are proud to build across the Triangle.
           </h1>
         </div>
       </section>
 
       <section className="px-6 lg:px-10 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl">
-          <SectionLabel>Curated Work</SectionLabel>
+          <SectionLabel>Portfolio</SectionLabel>
           <p className="mt-8 max-w-2xl text-muted-foreground leading-relaxed">
             A selection of landscapes, hardscapes, and outdoor living spaces shaped
             across the greater Triangle region. Each project is tailored to its property,

@@ -1,10 +1,14 @@
-
 import { useState } from "react";
+import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SectionLabel } from "@/components/SectionLabel";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { MapPin, Send } from "lucide-react";
 import garden from "@/assets/garden.jpg";
+
+export const Route = createFileRoute("/contact")({
+  component: ContactPage,
+});
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -34,19 +38,14 @@ export default function ContactPage() {
                   <p className="text-sm text-muted-foreground">Serving the greater NC Triangle &amp; surrounding areas</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1 flex h-9 w-9 items-center justify-center rounded-full bg-secondary"><Mail size={16}/></span>
-                <div>
-                  <p className="eyebrow">Email</p>
-                  <a href="mailto:hello@southlandscaping.co" className="mt-1 block hover:text-accent-foreground">hello@southlandscaping.co</a>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1 flex h-9 w-9 items-center justify-center rounded-full bg-secondary"><Phone size={16}/></span>
-                <div>
-                  <p className="eyebrow">Phone</p>
-                  <a href="tel:+19195550175" className="mt-1 block hover:text-accent-foreground">(919) 555-0175</a>
-                </div>
+              <div className="rounded-lg border border-border bg-card p-5">
+                <p className="eyebrow">Consultations</p>
+                <p className="mt-2 leading-relaxed">
+                  Use the project form to share your property details, goals, and preferred timing.
+                </p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  We review every inquiry and follow up to schedule the next step.
+                </p>
               </div>
             </div>
 

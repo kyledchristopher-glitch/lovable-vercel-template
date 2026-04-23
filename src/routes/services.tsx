@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SectionLabel } from "@/components/SectionLabel";
@@ -9,6 +9,10 @@ import garden from "@/assets/garden.jpg";
 import lawn from "@/assets/lawn.jpg";
 import walkway from "@/assets/walkway.jpg";
 import outdoorLiving from "@/assets/outdoor-living.jpg";
+
+export const Route = createFileRoute("/services")({
+  component: ServicesPage,
+});
 
 const groups = [
   {
