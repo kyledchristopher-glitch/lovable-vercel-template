@@ -27,7 +27,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         solid
-          ? "bg-background/85 backdrop-blur-md border-b border-border/60"
+          ? "bg-background/85 backdrop-blur-md"
           : "bg-gradient-to-b from-charcoal/70 via-charcoal/35 to-transparent"
       }`}
     >
