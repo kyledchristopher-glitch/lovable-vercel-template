@@ -35,7 +35,7 @@ export default function ProjectsPage() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader transparent />
 
-      <section className="relative h-[70svh] overflow-hidden">
+      <section className="relative h-[62svh] min-h-[480px] overflow-hidden md:h-[70svh]">
         <img src={aerial} alt="Aerial view of landscaped estate" className="absolute inset-0 h-full w-full object-cover animate-ken-burns" width={1920} height={1080}/>
         <div className="absolute inset-0 cinematic-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 lg:px-10 pb-24 text-white">
@@ -55,7 +55,7 @@ export default function ProjectsPage() {
             its owners, and the way they want to live outside.
           </p>
 
-          <div className="mt-16 grid gap-6 md:grid-cols-6 auto-rows-[260px]">
+          <div className="mt-16 grid auto-rows-[240px] gap-5 md:grid-cols-6 md:auto-rows-[260px] md:gap-6">
             {projects.map((p) => (
               <figure
                 key={p.title}
@@ -80,12 +80,12 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="px-6 lg:px-10 pb-32">
+      <section className="px-6 pb-24 lg:px-10 lg:pb-32">
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="font-display text-4xl lg:text-5xl text-balance">
             Imagining something for your property?
           </h2>
-          <Link to="/contact" className="mt-10 inline-flex items-center gap-3 rounded-full bg-foreground px-8 py-4 text-[12px] uppercase tracking-[0.2em] text-background">
+          <Link to="/contact" className="button-base button-primary mt-10">
             Request a Consultation <ArrowRight size={16}/>
           </Link>
         </div>

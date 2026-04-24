@@ -38,9 +38,8 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-cream/10">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream/50">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-center text-xs text-cream/50 sm:flex-row sm:text-left lg:px-10">
           <p>© {new Date().getFullYear()} South Landscaping. All rights reserved.</p>
-          <p className="tracking-[0.2em] uppercase">Designed with care in North Carolina</p>
         </div>
       </div>
     </footer>

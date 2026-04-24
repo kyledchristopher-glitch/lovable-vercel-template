@@ -19,8 +19,17 @@ export const Route = createFileRoute("/")({
 const services = [
   { icon: TreePine, title: "Landscape Design", desc: "Site-responsive design grounded in your land, lifestyle, and the seasons." },
   { icon: Hammer, title: "Hardscape & Stone", desc: "Patios, walkways, and retaining walls built with enduring natural materials." },
-  { icon: Leaf, title: "Gardens & Plantings", desc: "Layered planting design — perennials, ornamental grasses, native species." },
+  { icon: Leaf, title: "Gardens & Plantings", desc: "Layered planting design using perennials, ornamental grasses, and native species." },
   { icon: Sparkles, title: "Outdoor Living", desc: "Pergolas, fire features, and gathering spaces designed for everyday use." },
+];
+
+const trustPoints = [
+  "Clear communication from design through installation.",
+  "Owner-led projects with selective scheduling.",
+  "Respectful crews and clean job sites.",
+  "Thoughtful material selection and craftsmanship.",
+  "Long-term planting and drainage considerations.",
+  "Trusted across Youngsville, Wake Forest, Raleigh, and the Triangle.",
 ];
 
 export default function HomePage() {
@@ -29,7 +38,7 @@ export default function HomePage() {
       <SiteHeader transparent />
 
       {/* HERO */}
-      <section className="relative h-[100svh] w-full overflow-hidden">
+      <section className="relative min-h-[720px] overflow-hidden sm:h-[100svh]">
         <img
           src={hero}
           alt="Cinematic golden-hour landscape with stone patio and pergola"
@@ -40,27 +49,27 @@ export default function HomePage() {
         <div className="absolute inset-0 cinematic-overlay" />
         <div className="absolute inset-0 grain" />
 
-        <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-24 lg:px-10 lg:pb-32 text-white">
+        <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-20 pt-32 lg:px-10 lg:pb-32 text-white">
           <div className="animate-rise">
             <span className="eyebrow text-white/70">Landscape Design &amp; Build · Youngsville, NC</span>
           </div>
-          <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[1.05] sm:text-6xl lg:text-7xl text-balance animate-rise delay-100">
+          <h1 className="mt-5 max-w-4xl font-display text-4xl leading-[1.02] sm:text-6xl lg:text-7xl text-balance animate-rise delay-100">
             Outdoor spaces, <em className="italic text-white/95">crafted to live in.</em>
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 animate-rise delay-200">
+          <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-white/80 sm:text-base animate-rise delay-200">
             We design and build refined landscapes, hardscapes, and outdoor living
             environments that elevate the way you experience your property.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4 animate-rise delay-300">
+          <div className="mt-8 flex flex-wrap items-center gap-3 sm:mt-10 sm:gap-4 animate-rise delay-300">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 text-[12px] uppercase tracking-[0.2em] text-foreground transition-transform hover:-translate-y-0.5"
+              className="button-base button-light"
             >
               Request a Consultation <ArrowRight size={16} />
             </Link>
             <Link
               to="/projects"
-              className="inline-flex items-center gap-3 rounded-full border border-white/50 px-7 py-4 text-[12px] uppercase tracking-[0.2em] text-white transition-colors hover:bg-white/10"
+              className="button-base button-ghost-light"
             >
               View Projects
             </Link>
@@ -70,7 +79,7 @@ export default function HomePage() {
       </section>
 
       {/* POSITIONING */}
-      <section className="px-6 lg:px-10 py-28 lg:py-40">
+      <section className="px-6 py-24 lg:px-10 lg:py-36">
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Our Studio</SectionLabel>
           <h2 className="mt-8 max-w-4xl font-display text-4xl leading-tight sm:text-5xl lg:text-6xl text-balance">
@@ -85,15 +94,15 @@ export default function HomePage() {
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               From a single garden bed to a complete property transformation, our work is
-              guided by craftsmanship, restraint, and an honest respect for natural materials —
-              stone, wood, water, and the plants themselves.
+              guided by craftsmanship, restraint, and an honest respect for natural materials.
+              Stone, wood, water, and the plants themselves all matter.
             </p>
           </div>
         </div>
       </section>
 
       {/* SERVICES GRID */}
-      <section className="bg-secondary/40 px-6 lg:px-10 py-28 lg:py-36">
+      <section className="bg-secondary/40 px-6 py-24 lg:px-10 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
             <div>
@@ -123,7 +132,7 @@ export default function HomePage() {
       </section>
 
       {/* FEATURED IMAGERY (split) */}
-      <section className="px-6 lg:px-10 py-28 lg:py-40">
+      <section className="px-6 py-24 lg:px-10 lg:py-36">
         <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7 relative overflow-hidden rounded-lg shadow-frame">
             <img src={outdoorLiving} alt="Outdoor living space at dusk with stone fireplace" className="h-[520px] w-full object-cover" loading="lazy" width={1600} height={1200}/>
@@ -147,7 +156,7 @@ export default function HomePage() {
       </section>
 
       {/* CRAFTSMANSHIP / ABOUT */}
-      <section className="bg-charcoal text-cream px-6 lg:px-10 py-28 lg:py-40 relative overflow-hidden">
+      <section className="relative overflow-hidden bg-charcoal px-6 py-24 text-cream lg:px-10 lg:py-36">
         <div className="mx-auto max-w-7xl grid gap-16 lg:grid-cols-12 lg:gap-20 items-center">
           <div className="lg:col-span-5 relative">
             <img src={craft} alt="Craftsman placing natural stone" className="w-full rounded shadow-soft object-cover h-[560px]" loading="lazy" width={1280} height={1600}/>
@@ -168,20 +177,20 @@ export default function HomePage() {
             <div className="mt-12 grid grid-cols-3 gap-8 max-w-xl">
               <div>
                 <p className="font-display text-4xl">15+</p>
-                <p className="mt-2 text-cream/60 text-sm">Years of craft</p>
+                <p className="mt-2 text-cream/60 text-sm">Years experience</p>
               </div>
               <div>
                 <p className="font-display text-4xl">300+</p>
-                <p className="mt-2 text-cream/60 text-sm">Properties shaped</p>
+                <p className="mt-2 text-cream/60 text-sm">Projects completed</p>
               </div>
               <div>
                 <p className="font-display text-4xl">NC</p>
-                <p className="mt-2 text-cream/60 text-sm">Rooted locally</p>
+                <p className="mt-2 text-cream/60 text-sm">Locally based</p>
               </div>
             </div>
             <Link
               to="/about"
-              className="mt-12 inline-flex items-center gap-3 rounded-full border border-cream/40 px-7 py-4 text-[12px] uppercase tracking-[0.2em] text-cream hover:bg-cream hover:text-charcoal transition-colors"
+              className="button-base button-ghost-light mt-12"
             >
               Our Story <ArrowRight size={16} />
             </Link>
@@ -190,14 +199,14 @@ export default function HomePage() {
       </section>
 
       {/* OUTDOOR LIVING PHILOSOPHY */}
-      <section className="px-6 lg:px-10 py-28 lg:py-40">
+      <section className="px-6 py-24 lg:px-10 lg:py-32">
         <div className="mx-auto max-w-5xl text-center">
           <SectionLabel><span className="mx-auto">Philosophy</span></SectionLabel>
           <p className="mt-10 font-display text-3xl sm:text-4xl lg:text-5xl leading-snug text-balance">
             “A great landscape doesn’t announce itself. It draws you outside,
             slows you down, and quietly becomes the part of your home you love most.”
           </p>
-          <p className="mt-10 eyebrow">— South Landscaping Studio</p>
+          <p className="mt-10 eyebrow">South Landscaping Studio</p>
         </div>
 
         <div className="mx-auto mt-20 max-w-7xl grid gap-6 sm:grid-cols-3">
@@ -209,14 +218,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-background px-6 py-24 lg:px-10 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <SectionLabel>Why Homeowners Choose Us</SectionLabel>
+          <div className="mt-8 grid gap-6 lg:grid-cols-12 lg:gap-10">
+            <div className="lg:col-span-4">
+              <h2 className="font-display text-4xl leading-tight text-balance sm:text-5xl">
+                Why homeowners choose South Landscaping.
+              </h2>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-2">
+              {trustPoints.map((point) => (
+                <div key={point} className="trust-card">
+                  <div className="hairline" />
+                  <p className="mt-5 text-base leading-relaxed text-foreground/88">{point}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* TESTIMONIALS */}
-      <section className="bg-secondary/40 px-6 lg:px-10 py-28 lg:py-36">
+      <section className="bg-secondary/40 px-6 py-24 lg:px-10 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <SectionLabel>From Our Clients</SectionLabel>
           <h2 className="mt-6 font-display text-4xl sm:text-5xl max-w-3xl">
             Trusted by homeowners who care deeply about their property.
           </h2>
-          <div className="mt-16 grid gap-10 md:grid-cols-2">
+          <div className="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">
             {[
               {
                 q: "Just a fantastic job and we could not be more pleased. From start to finish, Hugo cared greatly about all the finishing touches.",
@@ -235,7 +265,8 @@ export default function HomePage() {
                 n: "Don A.",
               },
             ].map((t) => (
-              <figure key={t.n} className="bg-background p-10 rounded-lg shadow-soft">
+              <figure key={t.n} className="rounded-2xl bg-background p-8 shadow-soft lg:p-10">
+                <p className="rating">★★★★★</p>
                 <blockquote className="font-display text-xl leading-relaxed text-foreground/90">
                   “{t.q}”
                 </blockquote>
@@ -252,7 +283,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <img src={aerial} alt="Aerial view of luxury landscaped estate" className="absolute inset-0 h-full w-full object-cover" loading="lazy" width={1920} height={1080}/>
         <div className="absolute inset-0 bg-charcoal/75" />
-        <div className="relative mx-auto max-w-5xl px-6 lg:px-10 py-32 lg:py-44 text-center text-cream">
+        <div className="relative mx-auto max-w-5xl px-6 py-28 text-center text-cream lg:px-10 lg:py-40">
           <span className="eyebrow text-cream/60">Begin your project</span>
           <h2 className="mt-8 font-display text-4xl sm:text-6xl lg:text-7xl leading-[1.05] text-balance">
             Let’s shape something <em className="italic">enduring</em> together.
@@ -261,16 +292,19 @@ export default function HomePage() {
             We take on a limited number of design + build projects each season.
             Reach out to discuss your property and what you have in mind.
           </p>
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+          <p className="mt-5 text-sm leading-relaxed text-cream/65">
+            Consultations are typically scheduled 1–3 weeks in advance during peak season.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 rounded-full bg-cream px-8 py-4 text-[12px] uppercase tracking-[0.2em] text-charcoal hover:bg-white transition-colors"
+              className="button-base button-light"
             >
               Request a Consultation <ArrowRight size={16} />
             </Link>
             <Link
               to="/projects"
-              className="inline-flex items-center gap-3 rounded-full border border-cream/50 px-8 py-4 text-[12px] uppercase tracking-[0.2em] text-cream hover:bg-cream/10"
+              className="button-base button-ghost-light"
             >
               View Projects
             </Link>

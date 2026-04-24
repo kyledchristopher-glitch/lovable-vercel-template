@@ -31,8 +31,8 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
           : "bg-gradient-to-b from-charcoal/70 via-charcoal/35 to-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-        <Link to="/" className="group flex items-center gap-3">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-10 lg:py-5">
+        <Link to="/" className="group flex items-center gap-3 focus-visible:rounded-full focus-visible:ring-0">
           <span
             className={`flex h-9 w-9 items-center justify-center rounded-full border transition-colors ${
               solid ? "border-foreground/20 text-foreground" : "border-white/40 text-white"
@@ -47,14 +47,16 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-10 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               className={`text-[13px] uppercase tracking-[0.18em] transition-colors ${
-              solid ? "text-foreground/70 hover:text-foreground" : "text-white/80 hover:text-white"
-              } drop-shadow-[0_1px_10px_rgba(0,0,0,0.3)]`}
+              solid
+                ? "text-foreground/70 hover:text-foreground data-[status=active]:text-foreground"
+                : "text-white/80 hover:text-white data-[status=active]:text-white"
+              } drop-shadow-[0_1px_10px_rgba(0,0,0,0.3)] focus-visible:rounded-full focus-visible:ring-0`}
             >
               {l.label}
             </Link>
@@ -63,33 +65,33 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
 
         <Link
           to="/contact"
-          className={`hidden lg:inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-[12px] uppercase tracking-[0.2em] transition-all ${
+          className={`button-base hidden lg:inline-flex ${
             solid
-              ? "border-foreground bg-foreground text-background hover:bg-foreground/90"
-              : "border-white text-white hover:bg-white hover:text-foreground shadow-[0_10px_30px_rgba(0,0,0,0.18)]"
+              ? "button-primary"
+              : "button-ghost-light shadow-[0_10px_30px_rgba(0,0,0,0.18)]"
           }`}
         >
-          Request Consultation
+          Request a Consultation
         </Link>
 
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className={`lg:hidden rounded-full border p-2 ${solid ? "border-foreground/20 text-foreground" : "border-white/40 text-white"}`}
+          className={`lg:hidden rounded-full border p-2.5 ${solid ? "border-foreground/20 text-foreground" : "border-white/40 text-white"}`}
         >
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>
 
       {open && (
-        <div className="lg:hidden bg-background border-t border-border">
-          <div className="flex flex-col px-6 py-6 gap-5">
+        <div className="lg:hidden border-t border-border bg-background/98 backdrop-blur-md">
+          <div className="flex flex-col gap-5 px-5 py-6">
             {links.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="text-foreground/80 text-sm uppercase tracking-[0.18em]"
+                className="rounded-xl px-1 py-1 text-sm uppercase tracking-[0.18em] text-foreground/80 data-[status=active]:text-foreground"
               >
                 {l.label}
               </Link>
@@ -97,9 +99,9 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-foreground px-5 py-3 text-[12px] uppercase tracking-[0.2em] text-background"
+              className="button-base button-primary mt-2 w-full"
             >
-              Request Consultation
+              Request a Consultation
             </Link>
           </div>
         </div>

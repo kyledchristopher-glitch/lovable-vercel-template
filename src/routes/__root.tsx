@@ -2,6 +2,7 @@ import type * as React from "react";
 import { HeadContent, Link, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import heroImage from "../assets/hero.jpg";
 
 function NotFoundComponent() {
   return (
@@ -30,27 +31,40 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "South Landscaping" },
+      { title: "South Landscaping | Landscape Design & Build in Youngsville, NC" },
       {
         name: "description",
         content:
-          "South Landscaping designs and builds patios, walkways, retaining walls, gardens, and outdoor living spaces across Youngsville, Wake Forest, Raleigh, and nearby North Carolina communities.",
+          "South Landscaping designs and builds refined landscapes, hardscapes, gardens, and outdoor living spaces across Youngsville, Wake Forest, Raleigh, and the greater Triangle.",
       },
       { name: "author", content: "South Landscaping" },
-      { property: "og:title", content: "South Landscaping" },
+      { property: "og:title", content: "South Landscaping | Landscape Design & Build in Youngsville, NC" },
       {
         property: "og:description",
         content:
-          "Landscape design, hardscaping, gardens, and outdoor living spaces built with care across the North Carolina Triangle.",
+          "South Landscaping designs and builds refined landscapes, hardscapes, gardens, and outdoor living spaces across Youngsville, Wake Forest, Raleigh, and the greater Triangle.",
       },
       { property: "og:site_name", content: "South Landscaping" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: heroImage },
+      { name: "twitter:title", content: "South Landscaping | Landscape Design & Build in Youngsville, NC" },
+      {
+        name: "twitter:description",
+        content:
+          "South Landscaping designs and builds refined landscapes, hardscapes, gardens, and outdoor living spaces across Youngsville, Wake Forest, Raleigh, and the greater Triangle.",
+      },
+      { name: "twitter:image", content: heroImage },
       { name: "twitter:card", content: "summary" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "icon",
+        href: "/favicon.svg",
+        type: "image/svg+xml",
       },
     ],
   }),

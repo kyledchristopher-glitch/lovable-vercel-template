@@ -62,7 +62,7 @@ export default function AboutPage() {
           <SectionLabel>How We Work</SectionLabel>
           <div className="mt-12 grid gap-12 md:grid-cols-3">
             {[
-              { n: "01", t: "Site First", d: "We start by listening — to the land, the light, and how you want to live outdoors." },
+              { n: "01", t: "Site First", d: "We start by listening to the land, the light, and how you want to live outdoors." },
               { n: "02", t: "Designed, Then Built", d: "Every project begins with a clear, considered plan before the first stone is set." },
               { n: "03", t: "Made to Last", d: "We choose materials and plants that age beautifully, so your landscape only improves." },
             ].map((v) => (
@@ -89,7 +89,7 @@ export default function AboutPage() {
       <section className="px-6 lg:px-10 pb-32">
         <div className="mx-auto max-w-5xl bg-charcoal text-cream rounded-lg p-14 lg:p-20 text-center">
           <h2 className="font-display text-4xl lg:text-5xl text-balance">Let’s talk about your property.</h2>
-          <Link to="/contact" className="mt-10 inline-flex items-center gap-3 rounded-full bg-cream px-8 py-4 text-[12px] uppercase tracking-[0.2em] text-charcoal">
+          <Link to="/contact" className="button-base button-light mt-10">
             Request a Consultation <ArrowRight size={16}/>
           </Link>
         </div>

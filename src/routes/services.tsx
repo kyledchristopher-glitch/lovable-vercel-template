@@ -34,7 +34,7 @@ const groups = [
     title: "Gardens & Plantings",
     image: walkway,
     items: ["Flower Beds & Gardens", "Garden Installation", "Mulch & Plant Installation"],
-    desc: "Layered planting design — perennials, ornamentals, and natives selected for our region.",
+    desc: "Layered planting design using perennials, ornamental grasses, and native species.",
   },
   {
     eyebrow: "Lawn",
@@ -64,7 +64,7 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader transparent />
 
-      <section className="relative h-[70svh] overflow-hidden">
+      <section className="relative h-[62svh] min-h-[480px] overflow-hidden md:h-[70svh]">
         <img src={patio} alt="Premium hardscape patio" className="absolute inset-0 h-full w-full object-cover animate-ken-burns" width={1280} height={1280}/>
         <div className="absolute inset-0 cinematic-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 lg:px-10 pb-24 text-white">
@@ -86,7 +86,7 @@ export default function ServicesPage() {
             Every service is delivered with the same care for craft and material.
           </p>
 
-          <div className="mt-20 space-y-24">
+          <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-24">
             {groups.map((g, i) => (
               <div key={g.title} className={`grid gap-10 lg:gap-16 lg:grid-cols-12 items-center ${i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}>
                 <div className="lg:col-span-7 overflow-hidden rounded-lg shadow-frame">
@@ -111,7 +111,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="px-6 lg:px-10 pb-32">
+      <section className="px-6 pb-24 lg:px-10 lg:pb-32">
         <div className="mx-auto max-w-5xl bg-charcoal text-cream rounded-lg p-14 lg:p-20 text-center">
           <h2 className="font-display text-4xl lg:text-5xl text-balance">
             Tell us what you’re imagining.
@@ -119,7 +119,7 @@ export default function ServicesPage() {
           <p className="mt-6 text-cream/70 max-w-xl mx-auto">
             Every project starts with a conversation about your property and goals.
           </p>
-          <Link to="/contact" className="mt-10 inline-flex items-center gap-3 rounded-full bg-cream px-8 py-4 text-[12px] uppercase tracking-[0.2em] text-charcoal">
+          <Link to="/contact" className="button-base button-light mt-10">
             Request a Consultation <ArrowRight size={16}/>
           </Link>
         </div>

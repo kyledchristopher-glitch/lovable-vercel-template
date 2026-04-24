@@ -130,6 +130,13 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  a, button, input, textarea, select {
+    outline: none;
+  }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+    box-shadow: 0 0 0 3px oklch(0.72 0.08 70 / 0.32);
   }
   h1, h2, h3, .font-display {
     font-family: var(--font-display);
@@ -164,6 +171,67 @@
     opacity: 0.12;
   }
   .text-balance { text-wrap: balance; }
+  .button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border-radius: 999px;
+    padding: 1rem 1.9rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+  }
+  .button-base svg {
+    transition: transform 180ms ease;
+  }
+  .button-base:hover svg {
+    transform: translateX(2px);
+  }
+  .button-primary {
+    background: var(--color-foreground);
+    color: var(--color-background);
+  }
+  .button-primary:hover {
+    background: color-mix(in oklch, var(--color-foreground) 90%, white 10%);
+  }
+  .button-light {
+    background: var(--color-cream);
+    color: var(--color-charcoal);
+  }
+  .button-light:hover {
+    background: white;
+  }
+  .button-ghost-light {
+    border: 1px solid oklch(1 0 0 / 0.45);
+    color: white;
+    backdrop-filter: blur(10px);
+  }
+  .button-ghost-light:hover {
+    background: oklch(1 0 0 / 0.08);
+  }
+  .button-ghost-dark {
+    border: 1px solid color-mix(in oklch, var(--color-foreground) 22%, transparent);
+    color: var(--color-foreground);
+    background: transparent;
+  }
+  .button-ghost-dark:hover {
+    background: color-mix(in oklch, var(--color-foreground) 6%, transparent);
+  }
+  .trust-card {
+    border-radius: 1rem;
+    border: 1px solid color-mix(in oklch, var(--color-foreground) 10%, transparent);
+    background: color-mix(in oklch, var(--color-card) 90%, white 10%);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-soft);
+  }
+  .rating {
+    font-size: 0.72rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: color-mix(in oklch, var(--color-foreground) 52%, var(--color-gold) 48%);
+  }
 
   @keyframes ken-burns {
     0% { transform: scale(1.05) translate3d(0,0,0); }
