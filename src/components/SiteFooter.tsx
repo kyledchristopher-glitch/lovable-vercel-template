@@ -5,12 +5,11 @@ export function SiteFooter() {
     <footer className="bg-charcoal text-cream">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-20 grid gap-14 md:grid-cols-12">
         <div className="md:col-span-5">
-          <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/40">
-              <span className="font-display text-lg">S</span>
-            </span>
-            <span className="font-display text-xl tracking-wide">South Landscaping</span>
-          </div>
+          <img
+            src="/south-landscaping-logo-final.png"
+            alt="South Landscaping"
+            className="w-[170px] max-w-full"
+          />
           <p className="mt-6 max-w-md text-cream/70 leading-relaxed">
             A landscape design and build studio crafting refined outdoor environments
             across Youngsville and the greater North Carolina region.

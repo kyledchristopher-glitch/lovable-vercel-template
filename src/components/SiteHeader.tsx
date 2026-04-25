@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import type { MouseEvent } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -23,6 +24,15 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
 
   const solid = !transparent || scrolled;
 
+  const handleLogoClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    setOpen(false);
+
+    if (window.location.pathname === "/") {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
@@ -31,23 +41,25 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
           : "bg-gradient-to-b from-charcoal/70 via-charcoal/35 to-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-10 lg:py-5">
-        <Link to="/" className="group flex items-center gap-3 focus-visible:rounded-full focus-visible:ring-0">
-          <span
-            className={`flex h-9 w-9 items-center justify-center rounded-full border transition-colors ${
-              solid ? "border-foreground/20 text-foreground" : "border-white/40 text-white"
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-5 px-5 lg:h-[72px] lg:px-10">
+        <Link
+          to="/"
+          aria-label="South Landscaping home"
+          onClick={handleLogoClick}
+          className="group flex h-full items-center focus-visible:rounded-full focus-visible:ring-0"
+        >
+          <img
+            src="/south-landscaping-logo-final.png"
+            alt="South Landscaping"
+            className={`h-auto w-[160px] max-w-none shrink-0 object-contain transition-[filter] lg:w-[230px] ${
+              solid
+                ? "brightness-0 saturate-100"
+                : "drop-shadow-[0_8px_24px_rgba(0,0,0,0.35)]"
             }`}
-          >
-            <span className="font-display text-lg leading-none">S</span>
-          </span>
-          <span
-            className={`font-display text-lg tracking-wide ${solid ? "text-foreground" : "text-white"}`}
-          >
-            South Landscaping
-          </span>
+          />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden h-full items-center gap-8 lg:flex">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -65,7 +77,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
 
         <Link
           to="/contact"
-          className={`button-base hidden lg:inline-flex ${
+          className={`button-base hidden h-[46px] items-center px-7 py-0 lg:inline-flex ${
             solid
               ? "button-primary"
               : "button-ghost-light shadow-[0_10px_30px_rgba(0,0,0,0.18)]"
@@ -77,7 +89,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className={`lg:hidden rounded-full border p-2.5 ${solid ? "border-foreground/20 text-foreground" : "border-white/40 text-white"}`}
+          className={`flex h-10 w-10 items-center justify-center rounded-full border p-0 lg:hidden ${solid ? "border-foreground/20 text-foreground" : "border-white/40 text-white"}`}
         >
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
