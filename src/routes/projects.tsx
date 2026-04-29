@@ -127,10 +127,10 @@ export default function ProjectsPage() {
       <section className="relative h-[62svh] min-h-[480px] overflow-hidden md:h-[70svh]">
         <img
           src="/portfolio/projects-hero.jpeg"
-          alt="Terraced hardscape patio with curved seat walls"
-          className="absolute inset-0 h-full w-full object-cover object-[center_62%] animate-ken-burns"
-          width={3201}
-          height={1800}
+          alt="Poolside putting green and stone patio installation"
+          className="absolute inset-0 h-full w-full object-cover object-[center_70%] animate-ken-burns"
+          width={2200}
+          height={1650}
         />
         <div className="absolute inset-0 cinematic-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-24 text-white lg:px-10">
