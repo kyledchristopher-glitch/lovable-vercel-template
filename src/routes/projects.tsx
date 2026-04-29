@@ -3,31 +3,120 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SectionLabel } from "@/components/SectionLabel";
 import { ArrowRight } from "lucide-react";
-import patio from "@/assets/patio.jpg";
-import retainingWall from "@/assets/retaining-wall.jpg";
-import garden from "@/assets/garden.jpg";
-import lawn from "@/assets/lawn.jpg";
-import walkway from "@/assets/walkway.jpg";
-import outdoorLiving from "@/assets/outdoor-living.jpg";
-import aerial from "@/assets/aerial.jpg";
-import hero from "@/assets/hero.jpg";
-import craft from "@/assets/craft.jpg";
 
 export const Route = createFileRoute("/projects")({
   component: ProjectsPage,
 });
 
-type Project = { img: string; title: string; loc: string; tag: string; size?: "tall" | "wide" };
+type Project = {
+  img: string;
+  title: string;
+  loc: string;
+  tag: string;
+  size?: "tall" | "wide";
+};
+
 const projects: Project[] = [
-  { img: outdoorLiving, title: "Pinehurst Outdoor Room", loc: "Wake Forest, NC", tag: "Outdoor Living", size: "tall" },
-  { img: patio, title: "Cedar Pergola & Stone Patio", loc: "Youngsville, NC", tag: "Hardscape" },
-  { img: walkway, title: "Front Approach Walkway", loc: "Raleigh, NC", tag: "Walkways" },
-  { img: retainingWall, title: "Terraced Stone Wall", loc: "Durham, NC", tag: "Retaining Walls", size: "tall" },
-  { img: garden, title: "Layered Perennial Garden", loc: "Youngsville, NC", tag: "Gardens" },
-  { img: lawn, title: "Estate Lawn Renovation", loc: "Wake Forest, NC", tag: "Lawn" },
-  { img: aerial, title: "Whole Property Transformation", loc: "Franklin County, NC", tag: "Design + Build", size: "wide" },
-  { img: hero, title: "Modern Lodge Courtyard", loc: "Raleigh, NC", tag: "Design + Build" },
-  { img: craft, title: "Custom Stone Detailing", loc: "Studio Work", tag: "Craft" },
+  {
+    img: "/portfolio/IMG_3433.jpeg",
+    title: "Artificial turf installation with paver walkway",
+    loc: "Triangle, NC",
+    tag: "Artificial Turf",
+    size: "tall",
+  },
+  {
+    img: "/portfolio/IMG_3440.jpeg",
+    title: "Backyard turf, stepping-stone patio, and fire pit area",
+    loc: "Triangle, NC",
+    tag: "Outdoor Living",
+  },
+  {
+    img: "/portfolio/IMG_5860.jpeg",
+    title: "Modern turf lawn with large stone pavers",
+    loc: "Triangle, NC",
+    tag: "Artificial Turf",
+  },
+  {
+    img: "/portfolio/IMG_5861.jpeg",
+    title: "Poolside turf and stone patio installation",
+    loc: "Triangle, NC",
+    tag: "Artificial Turf",
+    size: "tall",
+  },
+  {
+    img: "/portfolio/IMG_0204.jpeg",
+    title: "Pool patio paver installation",
+    loc: "Triangle, NC",
+    tag: "Paver Patios",
+  },
+  {
+    img: "/portfolio/IMG_0205.jpeg",
+    title: "Travertine-style pool deck and patio",
+    loc: "Triangle, NC",
+    tag: "Paver Patios",
+  },
+  {
+    img: "/portfolio/IMG_0315.jpeg",
+    title: "Paver patio and walkway installation",
+    loc: "Triangle, NC",
+    tag: "Paver Patios",
+  },
+  {
+    img: "/portfolio/IMG_2625.jpeg",
+    title: "Custom paver patio with circular fire pit",
+    loc: "Triangle, NC",
+    tag: "Outdoor Living",
+    size: "wide",
+  },
+  {
+    img: "/portfolio/IMG_2679.jpeg",
+    title: "Stamped concrete driveway installation",
+    loc: "Triangle, NC",
+    tag: "Concrete & Driveways",
+  },
+  {
+    img: "/portfolio/IMG_2706.jpeg",
+    title: "Finished concrete driveway and walkway",
+    loc: "Triangle, NC",
+    tag: "Concrete & Driveways",
+  },
+  {
+    img: "/portfolio/IMG_3208.jpeg",
+    title: "Paver patio installation around pool area",
+    loc: "Triangle, NC",
+    tag: "Paver Patios",
+  },
+  {
+    img: "/portfolio/IMG_3428.jpeg",
+    title: "Backyard putting green installation",
+    loc: "Triangle, NC",
+    tag: "Putting Greens",
+  },
+  {
+    img: "/portfolio/IMG_4455.jpeg",
+    title: "Artificial putting green installation",
+    loc: "Triangle, NC",
+    tag: "Putting Greens",
+  },
+  {
+    img: "/portfolio/IMG_4183.jpeg",
+    title: "Stamped concrete patio with stone border",
+    loc: "Triangle, NC",
+    tag: "Hardscapes",
+  },
+  {
+    img: "/portfolio/IMG_5120.jpeg",
+    title: "Large-format paver walkway installation",
+    loc: "Triangle, NC",
+    tag: "Hardscapes",
+  },
+  {
+    img: "/portfolio/IMG_5852.jpeg",
+    title: "Backyard turf and poolside hardscape",
+    loc: "Triangle, NC",
+    tag: "Artificial Turf",
+    size: "wide",
+  },
 ];
 
 export default function ProjectsPage() {
@@ -36,23 +125,28 @@ export default function ProjectsPage() {
       <SiteHeader transparent />
 
       <section className="relative h-[62svh] min-h-[480px] overflow-hidden md:h-[70svh]">
-        <img src={aerial} alt="Aerial view of landscaped estate" className="absolute inset-0 h-full w-full object-cover animate-ken-burns" width={1920} height={1080}/>
+        <img
+          src="/portfolio/IMG_5852.jpeg"
+          alt="Backyard turf and poolside hardscape"
+          className="absolute inset-0 h-full w-full object-cover animate-ken-burns"
+          width={1800}
+          height={1350}
+        />
         <div className="absolute inset-0 cinematic-overlay" />
-        <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 lg:px-10 pb-24 text-white">
-          <span className="eyebrow text-white/70 animate-rise">Projects</span>
-          <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl max-w-4xl text-balance animate-rise delay-100">
+        <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-24 text-white lg:px-10">
+          <span className="eyebrow animate-rise text-white/70">Projects</span>
+          <h1 className="mt-6 max-w-4xl text-balance font-display text-5xl sm:text-6xl lg:text-7xl animate-rise delay-100">
             Projects we are proud to build across the Triangle.
           </h1>
         </div>
       </section>
 
-      <section className="px-6 lg:px-10 py-24 lg:py-32">
+      <section className="px-6 py-24 lg:px-10 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <SectionLabel>Portfolio</SectionLabel>
-          <p className="mt-8 max-w-2xl text-muted-foreground leading-relaxed">
-            A selection of landscapes, hardscapes, and outdoor living spaces shaped
-            across the greater Triangle region. Each project is tailored to its property,
-            its owners, and the way they want to live outside.
+          <p className="mt-8 max-w-2xl leading-relaxed text-muted-foreground">
+            A selection of turf installations, patios, pool surrounds, putting greens,
+            concrete work, and outdoor living spaces built across the greater Triangle region.
           </p>
 
           <div className="mt-16 grid auto-rows-[240px] gap-5 md:grid-cols-6 md:auto-rows-[260px] md:gap-6">
@@ -63,11 +157,18 @@ export default function ProjectsPage() {
                   p.size === "tall"
                     ? "md:col-span-3 md:row-span-2"
                     : p.size === "wide"
-                    ? "md:col-span-6 md:row-span-2"
-                    : "md:col-span-3"
+                      ? "md:col-span-6 md:row-span-2"
+                      : "md:col-span-3"
                 }`}
               >
-                <img src={p.img} alt={p.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy"/>
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  width={1800}
+                  height={1350}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/0 to-transparent" />
                 <figcaption className="absolute inset-x-0 bottom-0 p-7 text-cream">
                   <span className="text-[10px] uppercase tracking-[0.25em] text-cream/70">{p.tag}</span>
@@ -82,11 +183,11 @@ export default function ProjectsPage() {
 
       <section className="px-6 pb-24 lg:px-10 lg:pb-32">
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="font-display text-4xl lg:text-5xl text-balance">
+          <h2 className="text-balance font-display text-4xl lg:text-5xl">
             Imagining something for your property?
           </h2>
           <Link to="/contact" className="button-base button-primary mt-10">
-            Request a Consultation <ArrowRight size={16}/>
+            Request a Consultation <ArrowRight size={16} />
           </Link>
         </div>
       </section>
