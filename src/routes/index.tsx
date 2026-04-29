@@ -4,13 +4,6 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SectionLabel } from "@/components/SectionLabel";
 import { ArrowRight, Leaf, Hammer, TreePine, Sparkles } from "lucide-react";
 import hero from "@/assets/hero.jpg";
-import walkway from "@/assets/walkway.jpg";
-import outdoorLiving from "@/assets/outdoor-living.jpg";
-import garden from "@/assets/garden.jpg";
-import patio from "@/assets/patio.jpg";
-import retainingWall from "@/assets/retaining-wall.jpg";
-import craft from "@/assets/craft.jpg";
-import aerial from "@/assets/aerial.jpg";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -135,21 +128,21 @@ export default function HomePage() {
       <section className="px-6 py-24 lg:px-10 lg:py-36">
         <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7 relative overflow-hidden rounded-lg shadow-frame">
-            <img src={outdoorLiving} alt="Outdoor living space at dusk with stone fireplace" className="h-[520px] w-full object-cover" loading="lazy" width={1600} height={1200}/>
+            <img src="/portfolio/home-featured.jpeg" alt="Backyard turf, bridge, and fire pit area" className="h-[520px] w-full object-cover" loading="lazy" width={2200} height={1650}/>
           </div>
           <div className="lg:col-span-5 flex flex-col justify-end">
             <SectionLabel>Featured</SectionLabel>
             <h3 className="mt-6 font-display text-3xl lg:text-4xl leading-tight text-balance">
-              An outdoor living room set against the Carolina pines.
+              A backyard retreat shaped with turf, stone, and a warm gathering point.
             </h3>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              A stacked-stone fireplace anchors a warm cedar deck, framed by layered
-              plantings and a soft amber glow at golden hour. Quiet, generous, and
-              made for long evenings.
+              Stepping-stone bands, a custom bridge, boulder accents, and a circular fire feature
+              come together as one cohesive outdoor setting, balancing open recreation space with
+              strong visual structure.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-4">
-              <img src={walkway} alt="Stone walkway through garden" className="h-44 w-full object-cover rounded" loading="lazy" width={1280} height={1600}/>
-              <img src={garden} alt="Layered planting bed" className="h-44 w-full object-cover rounded" loading="lazy" width={1280} height={1280}/>
+              <img src="/portfolio/home-1.jpeg" alt="Circular hardscape patio with seat walls and fire pit" className="h-44 w-full object-cover rounded" loading="lazy" width={1800} height={2386}/>
+              <img src="/portfolio/home-2.jpeg" alt="Large-format stone pavers set within artificial turf" className="h-44 w-full object-cover rounded" loading="lazy" width={1800} height={1172}/>
             </div>
           </div>
         </div>
@@ -159,7 +152,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-charcoal px-6 py-24 text-cream lg:px-10 lg:py-36">
         <div className="mx-auto max-w-7xl grid gap-16 lg:grid-cols-12 lg:gap-20 items-center">
           <div className="lg:col-span-5 relative">
-            <img src={craft} alt="Craftsman placing natural stone" className="w-full rounded shadow-soft object-cover h-[560px]" loading="lazy" width={1280} height={1600}/>
+            <img src="/portfolio/home-3.jpeg" alt="Pool deck and modern hardscape installation" className="w-full rounded shadow-soft object-cover h-[560px]" loading="lazy" width={1800} height={1350}/>
           </div>
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3 text-cream/60">
@@ -210,7 +203,7 @@ export default function HomePage() {
         </div>
 
         <div className="mx-auto mt-20 max-w-7xl grid gap-6 sm:grid-cols-3">
-          {[patio, retainingWall, aerial].map((src, i) => (
+          {["/portfolio/home-1.jpeg", "/portfolio/home-2.jpeg", "/portfolio/home-3.jpeg"].map((src, i) => (
             <div key={i} className="overflow-hidden rounded-lg shadow-frame">
               <img src={src} alt="Featured landscape work" className="h-72 w-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" width={1280} height={1280}/>
             </div>
@@ -281,7 +274,7 @@ export default function HomePage() {
 
       {/* FINAL CTA */}
       <section className="relative overflow-hidden">
-        <img src={aerial} alt="Aerial view of luxury landscaped estate" className="absolute inset-0 h-full w-full object-cover" loading="lazy" width={1920} height={1080}/>
+        <img src="/portfolio/home-featured.jpeg" alt="Backyard turf and bridge at dusk" className="absolute inset-0 h-full w-full object-cover" loading="lazy" width={2200} height={1650}/>
         <div className="absolute inset-0 bg-charcoal/75" />
         <div className="relative mx-auto max-w-5xl px-6 py-28 text-center text-cream lg:px-10 lg:py-40">
           <span className="eyebrow text-cream/60">Begin your project</span>

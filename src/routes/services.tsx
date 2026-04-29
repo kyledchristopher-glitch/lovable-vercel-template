@@ -107,7 +107,7 @@ export default function ServicesPage() {
                     src={g.image}
                     alt={g.title}
                     className={`h-[460px] w-full object-cover ${
-                      g.title === "Concrete & Driveways" ? "object-[center_82%]" : ""
+                      g.title === "Concrete & Driveways" ? "object-[center_72%]" : ""
                     }`}
                     loading="lazy"
                     width={1800}
