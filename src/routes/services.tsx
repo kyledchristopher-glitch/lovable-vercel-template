@@ -69,10 +69,10 @@ export default function ServicesPage() {
       <section className="relative h-[62svh] min-h-[480px] overflow-hidden md:h-[70svh]">
         <img
           src="/portfolio/services-hero.jpeg"
-          alt="Pool, turf, and putting green installation"
-          className="absolute inset-0 h-full w-full object-cover object-[center_72%] animate-ken-burns"
-          width={1800}
-          height={1350}
+          alt="Poolside patio and stair hardscape installation"
+          className="absolute inset-0 h-full w-full object-cover object-[center_58%] animate-ken-burns"
+          width={2200}
+          height={1542}
         />
         <div className="absolute inset-0 cinematic-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-24 text-white lg:px-10">
