@@ -44,17 +44,15 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-5 px-5 lg:h-[72px] lg:px-10">
         <Link
           to="/"
-          aria-label="South Landscaping home"
+          aria-label="S.L. and Grading LLC home"
           onClick={handleLogoClick}
           className="group flex h-full items-center focus-visible:rounded-full focus-visible:ring-0"
         >
           <img
-            src="/south-landscaping-logo-final.png"
-            alt="South Landscaping"
-            className={`h-auto w-[160px] max-w-none shrink-0 object-contain transition-[filter] lg:w-[230px] ${
-              solid
-                ? "brightness-0 saturate-100"
-                : "drop-shadow-[0_8px_24px_rgba(0,0,0,0.35)]"
+            src="/sl-grading-logo-white.png"
+            alt="S.L. & Grading LLC"
+            className={`max-h-[76px] w-auto shrink-0 object-contain transition-opacity duration-200 group-hover:opacity-88 lg:max-h-[94px] ${
+              solid ? "opacity-92" : "opacity-100"
             }`}
           />
         </Link>

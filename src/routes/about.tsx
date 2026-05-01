@@ -34,13 +34,20 @@ export default function AboutPage() {
         <div className="mx-auto max-w-5xl grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <SectionLabel>Our Story</SectionLabel>
+            <div className="mt-8 inline-flex rounded-2xl border border-border/70 bg-[#07120d] px-5 py-4 shadow-soft">
+              <img
+                src="/sl-grading-logo-color.png"
+                alt="S.L. & Grading LLC"
+                className="w-[180px] max-w-full"
+              />
+            </div>
             <h2 className="mt-8 font-display text-3xl lg:text-4xl leading-tight">
               Rooted in Youngsville. Working across North Carolina.
             </h2>
           </div>
           <div className="lg:col-span-7 space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              South Landscaping was founded on a simple idea: the outdoors should
+              S.L. and Grading LLC was founded on a simple idea: the outdoors should
               feel like the most considered part of your home, not an afterthought.
             </p>
             <p>

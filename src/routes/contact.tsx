@@ -43,7 +43,7 @@ const submitConsultation = createServerFn({ method: "POST" })
     }
 
     const lines = [
-      "New consultation request from South Landscaping Website",
+      "New consultation request from S.L. and Grading LLC Website",
       "",
       `Name: ${data.name}`,
       `Email: ${data.email}`,
@@ -75,10 +75,10 @@ const submitConsultation = createServerFn({ method: "POST" })
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: `South Landscaping <${fromEmail}>`,
+        from: `S.L. and Grading LLC <${fromEmail}>`,
         to: [toEmail],
         reply_to: data.email,
-        subject: "New Consultation Request from South Landscaping Website",
+        subject: "New Consultation Request from S.L. and Grading LLC Website",
         text: lines.join("\n"),
         html,
       }),

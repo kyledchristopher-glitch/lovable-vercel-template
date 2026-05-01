@@ -31,27 +31,27 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "South Landscaping | Landscape Design & Build in Youngsville, NC" },
+      { title: "S.L. and Grading LLC | Landscape Design & Build in Youngsville, NC" },
       {
         name: "description",
         content:
-          "South Landscaping designs and builds refined landscapes, hardscapes, gardens, and outdoor living spaces across Youngsville, Wake Forest, Raleigh, and the greater Triangle.",
+          "S.L. and Grading LLC designs and builds refined landscapes, grading, hardscapes, and outdoor living spaces across Youngsville, Wake Forest, Raleigh, and the greater Triangle.",
       },
-      { name: "author", content: "South Landscaping" },
-      { property: "og:title", content: "South Landscaping | Landscape Design & Build in Youngsville, NC" },
+      { name: "author", content: "S.L. and Grading LLC" },
+      { property: "og:title", content: "S.L. and Grading LLC | Landscape Design & Build in Youngsville, NC" },
       {
         property: "og:description",
         content:
-          "South Landscaping designs and builds refined landscapes, hardscapes, gardens, and outdoor living spaces across Youngsville, Wake Forest, Raleigh, and the greater Triangle.",
+          "S.L. and Grading LLC designs and builds refined landscapes, grading, hardscapes, and outdoor living spaces across Youngsville, Wake Forest, Raleigh, and the greater Triangle.",
       },
-      { property: "og:site_name", content: "South Landscaping" },
+      { property: "og:site_name", content: "S.L. and Grading LLC" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: heroImage },
-      { name: "twitter:title", content: "South Landscaping | Landscape Design & Build in Youngsville, NC" },
+      { name: "twitter:title", content: "S.L. and Grading LLC | Landscape Design & Build in Youngsville, NC" },
       {
         name: "twitter:description",
         content:
-          "South Landscaping designs and builds refined landscapes, hardscapes, gardens, and outdoor living spaces across Youngsville, Wake Forest, Raleigh, and the greater Triangle.",
+          "S.L. and Grading LLC designs and builds refined landscapes, grading, hardscapes, and outdoor living spaces across Youngsville, Wake Forest, Raleigh, and the greater Triangle.",
       },
       { name: "twitter:image", content: heroImage },
       { name: "twitter:card", content: "summary" },

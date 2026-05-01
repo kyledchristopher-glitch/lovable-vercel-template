@@ -81,7 +81,7 @@ export default function HomePage() {
           </h2>
           <div className="mt-12 grid gap-12 md:grid-cols-2 md:gap-20">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              South Landscaping is a design-led practice based in Youngsville, North Carolina.
+              S.L. and Grading LLC is a design-led practice based in Youngsville, North Carolina.
               We work closely with each client to shape outdoor environments that are quietly
               beautiful, deeply considered, and built to last.
             </p>
@@ -199,7 +199,7 @@ export default function HomePage() {
             “A great landscape doesn’t announce itself. It draws you outside,
             slows you down, and quietly becomes the part of your home you love most.”
           </p>
-          <p className="mt-10 eyebrow">South Landscaping Studio</p>
+          <p className="mt-10 eyebrow">S.L. and Grading LLC</p>
         </div>
 
         <div className="mx-auto mt-20 max-w-7xl grid gap-6 sm:grid-cols-3">
@@ -217,7 +217,7 @@ export default function HomePage() {
           <div className="mt-8 grid gap-6 lg:grid-cols-12 lg:gap-10">
             <div className="lg:col-span-4">
               <h2 className="font-display text-4xl leading-tight text-balance sm:text-5xl">
-                Why homeowners choose South Landscaping.
+                Why homeowners choose S.L. and Grading LLC.
               </h2>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-2">
@@ -254,7 +254,7 @@ export default function HomePage() {
                 n: "Joe M.",
               },
               {
-                q: "I chose South Landscaping based on the overwhelmingly positive reviews and Hugo’s professionalism. I am completely satisfied and wholeheartedly recommend South Landscaping.",
+                q: "I chose S.L. and Grading LLC based on the overwhelmingly positive reviews and Hugo’s professionalism. I am completely satisfied and wholeheartedly recommend S.L. and Grading LLC.",
                 n: "Don A.",
               },
             ].map((t) => (

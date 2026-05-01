@@ -5,14 +5,16 @@ export function SiteFooter() {
     <footer className="bg-charcoal text-cream">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-20 grid gap-14 md:grid-cols-12">
         <div className="md:col-span-5">
-          <img
-            src="/south-landscaping-logo-final.png"
-            alt="South Landscaping"
-            className="w-[170px] max-w-full"
-          />
+          <div className="inline-flex rounded-2xl border border-white/10 bg-[#07120d] px-5 py-4 shadow-[0_18px_50px_rgba(0,0,0,0.25)]">
+            <img
+              src="/sl-grading-logo-color.png"
+              alt="S.L. & Grading LLC"
+              className="w-[180px] max-w-full"
+            />
+          </div>
           <p className="mt-6 max-w-md text-cream/70 leading-relaxed">
-            A landscape design and build studio crafting refined outdoor environments
-            across Youngsville and the greater North Carolina region.
+            S.L. and Grading LLC crafts refined outdoor environments across Youngsville
+            and the greater North Carolina region.
           </p>
         </div>
 
@@ -38,7 +40,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-cream/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-center text-xs text-cream/50 sm:flex-row sm:text-left lg:px-10">
-          <p>© {new Date().getFullYear()} South Landscaping. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} S.L. and Grading LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>
