@@ -51,8 +51,8 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
           <img
             src="/sl-grading-logo-white.png"
             alt="S.L. & Grading LLC"
-            className={`max-h-[76px] w-auto shrink-0 object-contain transition-opacity duration-200 group-hover:opacity-88 lg:max-h-[94px] ${
-              solid ? "opacity-92" : "opacity-100"
+            className={`max-h-[76px] w-auto shrink-0 object-contain transition-[opacity,filter] duration-200 group-hover:opacity-88 lg:max-h-[94px] ${
+              solid ? "brightness-0 opacity-92" : "opacity-100"
             }`}
           />
         </Link>
